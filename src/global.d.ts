@@ -1,0 +1,9 @@
+declare module '@arco-themes/react-easy-email-theme/css/arco.css';
+declare module '@arco-themes/react-easy-email-theme-green/css/arco.css';
+declare module '@arco-themes/react-easy-email-theme-purple/css/arco.css';
+declare module 'final-form-set-field-touched';
+declare module 'history';
+declare module 'is-hotkey';
+declare module 'react-color';
+declare module '*.scss';
+declare module 'uuid';

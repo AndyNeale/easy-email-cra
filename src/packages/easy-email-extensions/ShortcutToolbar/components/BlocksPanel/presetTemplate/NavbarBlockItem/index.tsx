@@ -1,0 +1,99 @@
+/* eslint-disable react/no-array-index-key */
+
+import { AdvancedType } from 'packages/easy-email-core';
+import { Stack } from 'packages/easy-email-editor';
+import { BlockMaskWrapper } from 'packages/easy-email-extensions/ShortcutToolbar/components/BlockMaskWrapper';
+import { Picture } from 'packages/easy-email-extensions/ShortcutToolbar/components/Picture';
+import { getImg } from 'packages/easy-email-extensions/ShortcutToolbar/utils/getImg';
+
+const list = [
+  {
+    thumbnail: getImg('IMAGE_46'),
+    payload: {
+      type: AdvancedType.NAVBAR,
+      data: {
+        value: {
+          links: [
+            {
+              href: '/gettings-started-onboard',
+              content: 'HOME',
+              color: '#000000',
+              'font-size': '13px',
+              target: '_blank',
+              padding: '15px 10px 15px 10px',
+            },
+            {
+              href: '/try-it-live',
+              content: 'NEW',
+              color: '#000000',
+              'font-size': '13px',
+              target: '_blank',
+              padding: '15px 10px 15px 10px',
+            },
+            {
+              href: '/templates',
+              content: 'WOMEN',
+              color: '#000000',
+              'font-size': '13px',
+              target: '_blank',
+              padding: '15px 10px 15px 10px',
+            },
+            {
+              href: '/components',
+              content: 'KIDS',
+              color: '#000000',
+              'font-size': '13px',
+              target: '_blank',
+              padding: '15px 10px 15px 10px',
+            },
+            {
+              href: '/components',
+              content: 'BLOG',
+              color: '#000000',
+              'font-size': '13px',
+              target: '_blank',
+              padding: '15px 10px 15px 10px',
+            },
+          ],
+        },
+      },
+      attributes: {
+        align: 'center',
+        'base-url': 'https://mjml.io',
+      },
+      children: [],
+    },
+  },
+];
+
+export function NavbarBlockItem() {
+  return (
+    <Stack.Item fill>
+      <Stack vertical>
+        {list.map((item, index) => {
+          return (
+            <BlockMaskWrapper
+              key={index}
+              type={AdvancedType.NAVBAR}
+              payload={item.payload}
+            >
+              <div style={{ position: 'relative' }}>
+                <Picture src={item.thumbnail} />
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 2,
+                  }}
+                />
+              </div>
+            </BlockMaskWrapper>
+          );
+        })}
+      </Stack>
+    </Stack.Item>
+  );
+}
