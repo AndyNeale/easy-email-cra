@@ -1,12 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-shadow */
 
+import {
+  AdvancedBlock,
+  generateAdvancedBlock,
+} from 'packages/easy-email-core/blocks/advanced/generateAdvancedBlock';
 import { BlockRenderer } from 'packages/easy-email-core/components/BlockRenderer';
 import { AdvancedType, BasicType } from 'packages/easy-email-core/constants';
 import { getChildIdx } from 'packages/easy-email-core/utils';
 import { classnames } from 'packages/easy-email-core/utils/classnames';
 import { getPreviewClassName } from 'packages/easy-email-core/utils/getPreviewClassName';
-import { AdvancedBlock, generateAdvancedBlock } from './generateAdvancedBlock';
 
 export function generateAdvancedLayoutBlock<T extends AdvancedBlock>(option: {
   type: string;
