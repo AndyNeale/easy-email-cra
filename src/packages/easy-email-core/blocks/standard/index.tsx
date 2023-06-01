@@ -1,4 +1,8 @@
 import { BasicType } from 'packages/easy-email-core/constants';
+import { Accordion, IAccordion } from './Accordion';
+import { AccordionElement, IAccordionElement } from './AccordionElement';
+import { AccordionText, IAccordionText } from './AccordionText';
+import { AccordionTitle, IAccordionTitle } from './AccordionTitle';
 import { Button, IButton } from './Button';
 import { Carousel, ICarousel } from './Carousel';
 import { Column, IColumn } from './Column';
@@ -12,15 +16,10 @@ import { IRaw, Raw } from './Raw';
 import { ISection, Section } from './Section';
 import { ISocial, Social } from './Social';
 import { ISpacer, Spacer } from './Spacer';
+import { ITable, Table } from './Table';
 import { ITemplate, Template } from './Template';
 import { IText, Text } from './Text';
 import { IWrapper, Wrapper } from './Wrapper';
-
-import { Accordion, IAccordion } from './Accordion';
-import { AccordionElement, IAccordionElement } from './AccordionElement';
-import { AccordionText, IAccordionText } from './AccordionText';
-import { AccordionTitle, IAccordionTitle } from './AccordionTitle';
-import { ITable, Table } from './Table';
 
 export const standardBlocks = {
   [BasicType.PAGE]: Page,
